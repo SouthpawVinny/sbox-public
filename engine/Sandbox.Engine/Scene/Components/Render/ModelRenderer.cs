@@ -73,11 +73,11 @@ public partial class ModelRenderer : Renderer, ExecuteInEditor, ITintable, IMate
 	[DefaultValue( ulong.MaxValue )]
 	public ulong BodyGroups
 	{
-		get;
+		get => _bodyGroups;
 		set
 		{
-			if ( field == value ) return;
-			field = value;
+			if ( _bodyGroups == value ) return;
+			_bodyGroups = value;
 
 			Update();
 		}
